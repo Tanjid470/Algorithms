@@ -1,0 +1,39 @@
+package basicjava;
+
+import java.util.Arrays;
+
+public class ProblemSolving {
+
+    public static void main(String[] args) {
+        String result = convert("PAYPALISHIRING", 3);
+        System.out.println(result);
+    }
+
+    static public String convert(String s, int numRows) {
+
+        int sSize = s.length();
+        char[][] zigzag = new char[numRows][sSize / 2];
+        for (char[] row : zigzag) {
+            Arrays.fill(row, '0');
+        }
+//        for (int i = 0; i < sSize; i++) {
+//            for (int j = 0; j < 10; j++) {
+//                
+//            }     
+//        }
+        
+        for (int j = 0; j < numRows; j++) {
+            for (int i = 0; i < sSize / 2; i++) {
+                try {
+                    System.out.print(zigzag[j][i]);
+                    Thread.sleep(100);
+                } catch (Exception e) {
+                }
+
+            }
+            System.out.println("");
+        }
+
+        return "";
+    }
+}
